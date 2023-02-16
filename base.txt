@@ -1,0 +1,7 @@
+123,Peter Griffin,2000,1234
+321,Peter Griffin,100000,1234
+2115,Rick Astley,3000,qwerty
+2872,asd,5000,asd
+6156,annonymous,501,admin
+9212,annonymous,9999,admin1
+9343,Michal,5000,qwerty
