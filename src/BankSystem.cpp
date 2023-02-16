@@ -92,7 +92,7 @@ bool Bank::login(int id, std::string password) {
         std::cout << "Incorrect ID or password!\n";
         return false;
     }
-    current_id = id; //zapamietywane jest tylko ID zalogowanego uzytkownika
+    current_id = id;
     is_logged = true;
     std::cout << "Hello, " << accounts[id].get_owner_name() << "!\n";
     std::cout << "Your current balance: " << accounts[id].get_balance() << "\n";
