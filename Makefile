@@ -1,5 +1,6 @@
 CODE1=BankApp
-HFILE=BankSystem
+HFILE1=BankSystem
+HFILE2=BankAccount
 BASE=base.txt
 
 OBJS1=$(CODE1).o
@@ -9,12 +10,12 @@ EXEC1=$(CODE1).x
 CC=g++
 DIR = $(notdir $(CURDIR))
 
-CFLAGS= -Wall -std=c++11
+CFLAGS= -Wall -std=c++17
 
 %.o : %.cpp
 	$(CC) $(CFLAGS) -c $<
 
-$(EXEC1): $(CODE1).cpp $(HFILE).h
+$(EXEC1): $(CODE1).cpp $(HFILE1).o $(HFILE1).h $(HFILE2).h
 	$(CC) $(CFLAGS) -o $@ $^
 
 .PHONY: all run clean tar
