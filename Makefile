@@ -1,7 +1,9 @@
-CODE1=BankApp
-HFILE1=BankSystem
-HFILE2=BankAccount
-BASE=base.txt
+FILESDIR=src
+
+CODE1=$(FILESDIR)/BankApp
+HFILE1=$(FILESDIR)/BankSystem
+HFILE2=$(FILESDIR)/BankAccount
+BASE=$(FILESDIR)/base.txt
 
 OBJS1=$(CODE1).o
 
@@ -27,7 +29,7 @@ run: $(EXEC1)
 
 
 clean:
-	rm -f *.o  *~ *.a *.so *.x *.out; rm -rf
+	cd src; rm -f *.o  *~ *.a *.so *.x *.out; rm -rf
 
 tar: clean
 	(cd ../; tar -cvzf $(DIR).tar.gz  $(DIR) )
