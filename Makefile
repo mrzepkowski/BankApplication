@@ -29,7 +29,7 @@ run: $(EXEC1)
 
 
 clean:
-	cd src; rm -f *.o  *~ *.a *.so *.x *.out; rm -rf
+	cd $(FILESDIR); rm -f *.o  *~ *.a *.so *.x *.out; rm -rf
 
 tar: clean
 	(cd ../; tar -cvzf $(DIR).tar.gz  $(DIR) )
