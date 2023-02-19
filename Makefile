@@ -1,4 +1,5 @@
-FILESDIR=src
+DIR = $(notdir $(CURDIR))
+FILESDIR = src
 
 CODE1=$(FILESDIR)/BankApp
 HFILE1=$(FILESDIR)/BankSystem
@@ -10,12 +11,11 @@ OBJS1=$(CODE1).o
 EXEC1=$(CODE1).x
 
 CC=g++
-DIR = $(notdir $(CURDIR))
 
 CFLAGS= -Wall -std=c++17
 
 %.o : %.cpp
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(EXEC1): $(CODE1).cpp $(HFILE1).o $(HFILE1).h $(HFILE2).h
 	$(CC) $(CFLAGS) -o $@ $^

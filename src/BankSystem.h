@@ -8,7 +8,7 @@
 
 class Bank {
     std::map<int, BankAccount>accounts;
-    int current_id; //pole przechowujace id zalogowanego uzytkownika
+    int current_id; //user currently logged in
     std::string base;
     bool is_logged;
     void read_from_base();
