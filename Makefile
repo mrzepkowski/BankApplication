@@ -17,7 +17,7 @@ CFLAGS= -Wall -std=c++17
 %.o : %.cpp
 	$(CC) $(CFLAGS) -c -o $@ $<
 
-$(EXEC1): $(CODE1).cpp $(HFILE1).o $(HFILE1).h $(HFILE2).h
+$(EXEC1): $(CODE1).o $(HFILE1).o $(HFILE1).h $(HFILE2).h
 	$(CC) $(CFLAGS) -o $@ $^
 
 .PHONY: all run clean tar
